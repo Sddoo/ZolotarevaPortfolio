@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* grids */
+.grid_container {
+    margin: auto;
+    width: 100%;
+    height: 2000px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(200, 20px);
+}
+
+.grid_item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.popup {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    visibility: hidden;
+}
+
+.grid_item:hover {
+    content: "hello";
+    cursor: pointer;
+    opacity: 0.5;
+    visibility: visible;
+}
+
+/* <row-start> / <column-start> / <row-end> / <column-end>;*/
+.grid_item:nth-child(1) {
+    background-image: url("../images/1_1.jpg");
+    grid-area: 1 / 1 / 33 / 1;
+}
+
+.grid_item:nth-child(2) {
+    background-image: url("../images/1_3.jpg");
+    grid-area: 1 / 2 / 25 / 2;
+}
+
+.grid_item:nth-child(3) {
+    background-image: url("../images/1_2.jpg");
+    grid-area: 1 / 3 / 33 / 3;
+}
+
+.grid_item:nth-child(4) {
+    background-image: url("../images/11.jpg");
+    grid-area: 33 / 1 / 65 / 1;
+}
+
+.grid_item:nth-child(5) {
+    background-image: url("../images/2.1.jpg");
+    grid-area: 25 / 2 / 59 / 2;
+}
+
+.grid_item:nth-child(6) {
+    background-image: url("../images/10.jpg");
+    grid-area: 33 / 3 / 65 / 3;
+}
+
+.grid_item:nth-child(7) {
+    background-image: url("../images/3.1.jpg");
+    grid-area: 65 / 1 / 83 / 1;
+}
+
+.grid_item:nth-child(8) {
+    background-image: url("../images/12.jpg");
+    grid-area: 59 / 2 / 91 / 2;
+}
+
+.grid_item:nth-child(9) {
+    background-image: url("../images/5.1.jpg");
+    grid-area: 65 / 3 / 92 / 3;
+}
+
+.grid_item:nth-child(10) {
+    background-image: url("../images/4.1.jpg");
+    grid-area: 83 / 1 / 115 / 1;
+}
+
+/* tools */
+.magnifier_wrap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.magnifier {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
