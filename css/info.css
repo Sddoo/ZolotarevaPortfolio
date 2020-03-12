@@ -1,0 +1,13 @@
+.info {
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    left: -30%;
+    height: 1000px;
+}
+
+
