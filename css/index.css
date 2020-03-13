@@ -5,18 +5,29 @@ body {
     overflow-x: hidden;
 }
 
+.disable-hover {
+    pointer-events: none;
+}
+
 /*buttons*/
 .buttons_container {
-    position: absolute;
-    z-index: 20;
-    width: 100%;
-    height: 50px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 110px;
+    height: 330px;
 }
 
 .button {
     width: 100px;
-    height: 40px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 5px;
     background-color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 90px;
 }
 
 /* grids */
@@ -24,11 +35,12 @@ body {
     position: relative;
     margin: auto;
     width: 100%;
-    height: 2000px;
     background-color: black;
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(120, 20px);
+    grid-template-rows: repeat(70, 50px);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
 }
 
 .grid_item {
@@ -40,54 +52,69 @@ body {
 }
 
 /* <row-start> / <column-start> / <row-end> / <column-end>;*/
-.grid_item:first-child {
-    background-image: url("../images/1_1.jpg");
-    grid-area: 1 / 1 / 33 / 1;
-}
-
 .grid_item:nth-child(2) {
-    background-image: url("../images/1_3.jpg");
-    grid-area: 1 / 2 / 25 / 2;
+    background-image: url("../images/paramoni.png");
+    grid-area: 1 / 1 / 14 / 4;
 }
 
 .grid_item:nth-child(3) {
-    background-image: url("../images/1_2.jpg");
-    grid-area: 1 / 3 / 33 / 3;
+    background-image: url("../images/1_1.jpg");
+    grid-area: 14 / 1 / 28 / 1;
 }
 
 .grid_item:nth-child(4) {
-    background-image: url("../images/11.jpg");
-    grid-area: 33 / 1 / 65 / 1;
+    background-image: url("../images/1_3.jpg");
+    grid-area: 14 / 2 / 24 / 2;
 }
 
 .grid_item:nth-child(5) {
-    background-image: url("../images/2.1.jpg");
-    grid-area: 25 / 2 / 59 / 2;
+    background-image: url("../images/1_2.jpg");
+    grid-area: 14 / 3 / 28 / 3;
 }
 
 .grid_item:nth-child(6) {
-    background-image: url("../images/10.jpg");
-    grid-area: 33 / 3 / 65 / 3;
+    background-image: url("../images/11.jpg");
+    grid-area: 28 / 1 / 41 / 1;
 }
 
 .grid_item:nth-child(7) {
-    background-image: url("../images/3.1.jpg");
-    grid-area: 65 / 1 / 83 / 1;
+    background-image: url("../images/2.1.jpg");
+    grid-area: 24 / 2 / 38 / 2;
 }
 
 .grid_item:nth-child(8) {
-    background-image: url("../images/12.jpg");
-    grid-area: 59 / 2 / 91 / 2;
+    background-image: url("../images/5.1.jpg");
+    grid-area: 28 / 3 / 39 / 3;
 }
 
 .grid_item:nth-child(9) {
-    background-image: url("../images/5.1.jpg");
-    grid-area: 65 / 3 / 92 / 3;
+    background-image: url("../images/3.1.jpg");
+    grid-area: 41 / 1 / 48 / 1;
 }
 
 .grid_item:nth-child(10) {
+    background-image: url("../images/12.jpg");
+    grid-area: 38 / 2 / 51 / 2;
+}
+
+.grid_item:nth-child(11) {
     background-image: url("../images/4.1.jpg");
-    grid-area: 83 / 1 / 115 / 1;
+    grid-area: 39 / 3 / 52 / 3;
+}
+
+.grid_item:nth-child(12) {
+    background-image: url("../images/9.jpg");
+    grid-area: 48 / 1 / 66 / 1;
+}
+
+.grid_item:nth-child(13) {
+     background-image: url("../images/gif1.gif");
+     grid-area: 51 / 2 / 64 / 2;
+}
+
+.grid_item:nth-child(14) {
+    background-image: url("../images/10.jpg");
+    grid-area: 52 / 3 / 65 / 3;
 }
 
 /* popup */
@@ -137,4 +164,51 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
+}
+
+/*selected image*/
+.popup_bg {
+    position: fixed;
+    display: none;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.image_popup_wrap {
+    position: fixed;
+    display: none;
+    z-index: 4;
+    top: 20px;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+.image_popup {
+    z-index: 5;
+    overflow-x: hidden;
+    margin: 0 auto;
+    height: auto;
+    width: auto
+}
+
+.image_wrap {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.image_popup_content {
+    width: auto;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.description {
+    display: none;
 }
